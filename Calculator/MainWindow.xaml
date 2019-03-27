@@ -1,0 +1,48 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="335.776">
+    
+        <Grid x:Name="myGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label HorizontalAlignment="Right" Content="{Binding Result, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"  Name="lblResult" Grid.Row="0" Grid.ColumnSpan="4" FontSize="36"></Label>
+        <Label HorizontalAlignment="Left" Content="{Binding TriggerOperator, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  Name="lblDebug" Grid.Row="0" Grid.ColumnSpan="4" FontSize="36"></Label>
+        <Button Name="one" Content="1" Click="AddClick" Grid.Column="0" FontSize="36" Grid.Row="2"/>
+        <Button Name="two" Content="2" Click="AddClick" Grid.Column="1" FontSize="36" Grid.Row="2"/>
+        <Button Name="three" Content="3" Click="AddClick" Grid.Column="2" FontSize="36" Grid.Row="2"/>
+        <Button Name="four" Content="4" Click="AddClick" Grid.Column="0" FontSize="36" Grid.Row="3"/>
+        <Button Name="five" Content="5" Click="AddClick" Grid.Column="1" FontSize="36" Grid.Row="3"/>
+        <Button Name="six" Content="6" Grid.Column="2" Click="AddClick" FontSize="36" Grid.Row="3"/>
+        <Button Name="seven" Content="7" Grid.Column="0" Click="AddClick" FontSize="36" Grid.Row="4"/>
+        <Button Name="eight" Content="8" Grid.Column="1" Click="AddClick" FontSize="36" Grid.Row="4"/>
+        <Button Name="nice" Content="9" Grid.Column="2" Click="AddClick" FontSize="36" Grid.Row="4"/>
+        <Button Name="zero" Content="0" Grid.Column="1" Click="AddClick" FontSize="36" Grid.Row="5" Grid.ColumnSpan="2"/>
+        <Button Name="clearButton" Content="Clear" Grid.ColumnSpan="3" FontSize="36" Grid.Row="1" Click="AddClick"/>
+        <Button Name="Dot" Content="." FontSize="40" Grid.Column="0" Grid.Row="5"/>
+
+        <Button Name="Summ" Content="+" FontSize="36" Grid.Column="3" Grid.Row="1" Click="AddClick"/>
+        <Button Name="Substraction" Content="-" FontSize="36" Grid.Column="3" Grid.Row="2"/>
+        <Button Name="Division" Content="/" FontSize="36" Grid.Column="3" Grid.Row="3" Click="AddClick"/>
+        <Button Name="Multiply" Content="*" FontSize="36" Grid.Column="3" Grid.Row="4" Click="AddClick"/>
+        <Button Name="Resulting" Content="=" FontSize="36" Grid.Column="3" Grid.Row="5" Click="AddClick"/>
+
+    </Grid>
+   
+</Window>
